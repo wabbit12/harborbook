@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="HarborBook gives service businesses a clean, mobile‑first booking experience that keeps your calendar full."
         />
-        <link rel="icon" href="/harbook.png" />
+        <link rel="icon" href="/harborbook.png" />
       </Head>
       <Component {...pageProps} />
     </>

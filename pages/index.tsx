@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import logo from "../assets/harborbook.png";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 
@@ -20,7 +21,7 @@ export default function HomePage() {
           >
             <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-emerald-50 ring-1 ring-inset ring-emerald-200">
               <Image
-                src="/harbook.png"
+                src={logo}
                 alt="HarborBook logo"
                 width={32}
                 height={32}
