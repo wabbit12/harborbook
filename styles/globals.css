@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f8fb;
+  color: #0b1220;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(14, 165, 168, 0.2);
+}
+
