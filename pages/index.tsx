@@ -108,18 +108,22 @@ export default function HomePage() {
               </button>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-[11px] text-slate-300">
+            <div className="flex flex-wrap items-center gap-4 text-[11px] text-slate-500">
               <div className="flex items-center gap-2">
-                <span className="h-4 w-4 rounded-full bg-emerald-400/15 text-[10px] font-semibold text-emerald-300 ring-1 ring-inset ring-emerald-400/40 flex items-center justify-center">
+                <span className="h-4 w-4 rounded-full bg-emerald-500/15 text-[10px] font-semibold text-emerald-600 ring-1 ring-inset ring-emerald-400/60 flex items-center justify-center">
                   ✓
                 </span>
-                <span>No code or plugins required</span>
+                <span className="font-medium text-slate-700">
+                  No code or plugins required
+                </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="h-4 w-4 rounded-full bg-emerald-400/15 text-[10px] font-semibold text-emerald-300 ring-1 ring-inset ring-emerald-400/40 flex items-center justify-center">
+                <span className="h-4 w-4 rounded-full bg-emerald-500/15 text-[10px] font-semibold text-emerald-600 ring-1 ring-inset ring-emerald-400/60 flex items-center justify-center">
                   ✓
                 </span>
-                <span>Works with Stripe & Google Calendar</span>
+                <span className="font-medium text-slate-700">
+                  Works with Stripe & Google Calendar
+                </span>
               </div>
             </div>
           </motion.section>
