@@ -58,7 +58,7 @@ export default function HomePage() {
             </a>
             <a
               href="#cta"
-              className="rounded-full border border-teal-400/40 bg-teal-400/10 px-4 py-1.5 text-xs font-semibold text-teal-100 shadow-sm shadow-teal-500/20 transition hover:bg-teal-400/20 hover:text-white"
+              className="rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-white shadow-sm shadow-emerald-300/60 transition hover:bg-emerald-400"
             >
               Get started
             </a>
