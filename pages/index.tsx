@@ -1,17 +1,31 @@
 import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 
 export default function HomePage() {
   const [selectedDay, setSelectedDay] = useState<number | null>(12);
+
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-sky-50 via-white to-emerald-50 text-slate-900">
       {/* Shell */}
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pt-10">
         {/* Top nav */}
         <header className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100 ring-1 ring-inset ring-emerald-300/80">
-              <span className="text-sm font-semibold text-emerald-700">HB</span>
+          <motion.div
+            className="flex items-center gap-2"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-emerald-50 ring-1 ring-inset ring-emerald-200">
+              <Image
+                src="/harbook.png"
+                alt="HarborBook logo"
+                width={32}
+                height={32}
+                className="h-7 w-7 object-contain"
+              />
             </div>
             <div className="leading-tight">
               <p className="text-sm font-semibold tracking-tight text-slate-900">
@@ -21,9 +35,14 @@ export default function HomePage() {
                 Scheduling & payments for service businesses
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <nav className="hidden items-center gap-6 text-xs font-medium text-slate-600 sm:flex">
+          <motion.nav
+            className="hidden items-center gap-6 text-xs font-medium text-slate-600 sm:flex"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          >
             <a href="#features" className="transition hover:text-emerald-600">
               Features
             </a>
@@ -42,13 +61,18 @@ export default function HomePage() {
             >
               Get started
             </a>
-          </nav>
+          </motion.nav>
         </header>
 
         {/* Hero */}
         <main className="mt-10 flex flex-1 flex-col gap-12 lg:mt-16 lg:flex-row lg:items-center lg:gap-16">
           {/* Hero text */}
-          <section className="max-w-xl space-y-6">
+          <motion.section
+            className="max-w-xl space-y-6"
+            initial={{ opacity: 0, x: -24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800 shadow-sm shadow-emerald-100">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               Booking, reminders, and payments — in one place.
@@ -97,10 +121,15 @@ export default function HomePage() {
                 <span>Works with Stripe & Google Calendar</span>
               </div>
             </div>
-          </section>
+          </motion.section>
 
           {/* Hero "product" mock */}
-          <section className="relative w-full max-w-lg flex-1">
+          <motion.section
+            className="relative w-full max-w-lg flex-1"
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.05 }}
+          >
             <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.24),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(52,211,153,0.28),_transparent_55%)] opacity-80 blur-3xl" />
 
             <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-[0_18px_80px_rgba(15,23,42,0.18)]">
@@ -212,13 +241,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </section>
+          </motion.section>
         </main>
 
         {/* Sections */}
-        <section
+        <motion.section
           id="features"
           className="mt-16 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-3"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
@@ -264,11 +297,15 @@ export default function HomePage() {
               <li>• Simple payout reporting</li>
             </ul>
           </div>
-        </section>
+        </motion.section>
 
-        <section
+        <motion.section
           id="how-it-works"
           className="mt-14 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-[1.1fr,0.9fr]"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
         >
           <div className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
@@ -337,11 +374,15 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section
+        <motion.section
           id="pricing"
           className="mt-14 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-[1.1fr,0.9fr]"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
@@ -393,11 +434,15 @@ export default function HomePage() {
               Start free trial
             </a>
           </div>
-        </section>
+        </motion.section>
 
-        <section
+        <motion.section
           id="faq"
           className="mt-14 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
         >
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600">
@@ -436,7 +481,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
 
       <Footer />
